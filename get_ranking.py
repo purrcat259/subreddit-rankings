@@ -215,7 +215,7 @@ with open(markdown_file_name, mode='w') as mdfile:
     mdfile.write('Subreddit|Description|Popularity\n')
     mdfile.write(':-:|:-:|:-:\n')
     for sub in normal_ranked:
-        sub_name_and_link = '[/r/{}]({})'.format(sub['name'], sub['url'])
+        sub_name_and_link = '/r/{}'.format(sub['name'])
         if sub['traffic_url'] != 'N/A':
             sub_visits_and_link = '[{}]({})'.format(sub['bimonthly_uniques_average'], sub['traffic_url'])
         else:
